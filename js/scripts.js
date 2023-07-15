@@ -45,3 +45,12 @@ let pokemonList = [
         types: ['water']
     }
 ]
+
+//loop that prints out the pokemon in order along with their height
+for (let i = 0; i <= 8; i++) {
+    document.write(`<p> ${pokemonList[i]} (height: ${pokemonList[i]} ft)</p>`)
+    //this will highlight the largest pokemon:
+    if (pokemonList.height > 6.0) {
+        document.write('Wow, that\'s big!')
+    }
+}
