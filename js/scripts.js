@@ -48,9 +48,11 @@ let pokemonList = [
 
 //loop that prints out the pokemon in order along with their height
 for (let i = 0; i < pokemonList.length; i++) {
-    document.write(`<p> ${pokemonList[i].name} (height: ${pokemonList[i].height} ft)</p>`)
+    document.write(`<p> ${pokemonList[i].name} (height: ${pokemonList[i].height} ft)`)
     //this will highlight the largest pokemon (more than 6 feet tall):
-    if (pokemonList.height > 6.0) {
-        document.write('Wow, that\'s big!')
+    if (pokemonList[i].height > 6.0) {
+        document.write('<span class="special"> - Wow, that\'s big!</span>')
+    }else  {
+        document.write('</p>')
     }
 }

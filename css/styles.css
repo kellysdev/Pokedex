@@ -1,26 +1,74 @@
 /*
-background color: off white #FCFAFD
-primary color: lighter grey #888587
-secondary color: dark #3A393B
-light accent color: lightest grey: #EAE8EA
-dark accent color: darkest grey #555355
+Initial Color Palette:
+    black and white gameboy with color pokemon sprites
+background color: (off white) #FCFAFD, rgb(252, 250, 253)
+    primary color: (dark grey) #3A393B, rgb(58, 57, 59)
+    secondary color: (light grey) #888587, rgb(136, 133, 135)
+        light accent color: (lightest grey) #EAE8EA, rgb(234, 232, 234)
+        dark accent color: (darkest grey) #555355, rgb(85, 83, 85)
+
+
+Fonts:
+Text:VT323
+Heading: VT323
+Logo: (eventually) Pixelboy
 */
+
+/*Universal Styling*/
+:root {
+    --background-color: #FCFAFD;
+    --heading-color: #3A393b;
+}
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #FCFAFD;
+    background-color: var(--background-color);
 }
 
 h1 {
     font-family: 'VT323', monospace;
-    font-size: 38px;
-    color: #3A393b;
+    font-size: x-large;
+    color: var(--heading-color);
 }
 
 p {
     font-family: 'VT323', monospace;
-    font-size: 22px;
+    font-size: large;
+    text-align: center;
+}
+
+/*Header Styling*/
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.header__item {
+    flex-basis: 25%;
+}
+
+/*Main Section Styling*/
+main {
+    width: 90%;
+    margin: 20px auto;
+    /* border: 3px double black; */
+}
+
+.special {
+    font-size: medium;
+    color: var(--heading-color);
+}
+
+/*Media Queries*/
+@media all and (min-width: 600px) {
+    p {
+        font-size: x-large;
+    }
+    .special {
+        font-size: large;
+    }
 }
