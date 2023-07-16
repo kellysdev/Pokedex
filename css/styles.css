@@ -1,0 +1,20 @@
+/*
+background color: off white #FCFAFD
+primary color: lighter grey #888587
+secondary color: dark #3A393B
+light accent color: lightest grey: #EAE8EA
+dark accent color: darkest grey #555355
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FCFAFD;
+}
+
+h1 {
+    font-family: 'VT323', monospace;
+    font-size: 38px;
+}
