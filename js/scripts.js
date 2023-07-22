@@ -68,12 +68,13 @@ let pokemonRepository = (function(){
 })();
 
 function myLoopFunction(pokemon) {
-    document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + ' ft)');
-    if (pokemon.height > 6.0) {
-        document.write('<span class="special"> - Wow, that\'s big!</span>')
-    }else  {
-        document.write('</p>')
-    }
+    let variable = document.querySelector('.pokemon-list')
+    let listItem = document.createElement('li')
+    let button = document.createElement('button')
+    button.innerText = pokemon.name
+    button.classList.add('button')
+    listItem.appendChild(button)
+    variable.appendChild(listItem)
 }
 pokemonRepository.getAll().forEach(myLoopFunction);
 
@@ -86,3 +87,10 @@ pokemonRepository.add (
     }
   );
 // even though I get the item in the conosole log, it doesn't add Pikachu to the list
+
+// document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + ' ft)');
+    // if (pokemon.height > 6.0) {
+    //     document.write('<span class="special"> - Wow, that\'s big!</span>')
+    // }else  {
+    //     document.write('</p>')
+    // }
