@@ -51,8 +51,14 @@ let pokemonRepository = (function(){
         return pokemonList;
     }
 
+// problem with code:
     function add(item) {
-        pokemonList.add(item)
+        if (typeof item === 'object', Object.keys(item).includes('name', 'height', 'types'))  {
+            pokemonList.push(item),
+            console.log(item)
+        }else {
+            alert('Verify the Pokemon information.')
+        }
     }
 
     return {
@@ -70,3 +76,13 @@ function myLoopFunction(pokemon) {
     }
 }
 pokemonRepository.getAll().forEach(myLoopFunction);
+
+// testing if my bonus task to add conditionals/validation to the add function works:
+pokemonRepository.add (
+    {
+      name: 'Pikachu',
+      height: 1.3,
+      types: ['electric']
+    }
+  );
+// even though I get the item in the conosole log, it doesn't add Pikachu to the list
