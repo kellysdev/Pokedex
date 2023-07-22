@@ -18,6 +18,10 @@ Logo: (eventually) Pixelboy
 :root {
     --background-color: #FCFAFD;
     --heading-color: #3A393b;
+    --primary-color: #3A393b;
+    --secondary-color: #888587;
+    --li-accent-color: #EAE8EA;
+    --da-accent-color: #555355;
 }
 
 * {
@@ -40,6 +44,10 @@ p {
     text-align: center;
 }
 
+ul {
+    list-style: none;
+}
+
 /*Header Styling*/
 header {
     display: flex;
@@ -56,6 +64,17 @@ main {
     width: 90%;
     margin: 20px auto;
     /* border: 3px double black; */
+}
+
+.button {
+    border: 1px solid rgb(58, 58, 58);
+    border-radius: 3px;
+    background-color: rgba(134, 137, 117, .3);
+    margin: 3px;
+}
+
+.button:hover {
+    background-color: rgba(134, 137, 117, .1);
 }
 
 .special {
