@@ -151,8 +151,3 @@ function myLoopFunction(pokemon) {
     pokemonRepository.addListItem(pokemon)
 }
 pokemonRepository.getAll().forEach(myLoopFunction);
-
-//open the modal when a pokemon's button is clicked
-document.querySelector(pokemon).addEventListener('click', () => {
-    showModal(pokemon)
-})
