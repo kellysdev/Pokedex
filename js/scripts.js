@@ -85,22 +85,22 @@ let pokemonRepository = (function(){
         closeButtonElement.addEventListener('click', hideModal);
 
         let imageElement = document.createElement('img');
-        imageElement.src = item.imageUrl;
+        imageElement.src = pokemon.imageUrl;
 
         let nameElement = document.createElement('h1');
-        nameElement.innerText = item.name;
+        nameElement.innerText = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
 
-        //content to fill modal will play with later
-        // let heightElement = document.createElement('p');
-        // heightElement.innerText = item.height;
+        let heightElement = document.createElement('p');
+        heightElement.innerText = `${pokemon.height} decimeters`;
 
-        // let typesElement = document.createElement('p');
-        // typesElement.innerText = item.types;
+        let typesElement = document.createElement('p');
+        typesElement.innerText = pokemon.types;
 
         modal.appendChild(closeButtonElement);
         modal.appendChild(imageElement);
         modal.appendChild(nameElement);
-        // modal.appendChild(heightElement);
+        modal.appendChild(heightElement);
+        modal.appendChild(typesElement);
         modalContainer.appendChild(modal);
 
         //make modal visible when this function is called
@@ -148,6 +148,6 @@ function myLoopFunction(pokemon) {
 pokemonRepository.getAll().forEach(myLoopFunction);
 
 //open the modal when a pokemon's button is clicked
-document.querySelector(pokemonListVar).addEventListener('click', () => {
+document.querySelector(pokemon).addEventListener('click', () => {
     showModal(pokemon)
 })

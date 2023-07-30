@@ -14,6 +14,53 @@ Heading: VT323
 Logo: (eventually) Pixelboy
 */
 
+/*Modal Styling*/
+#modal-container{
+    position: fixed;
+    padding: 20px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+#modal-container.is-visible {
+    position: fixed;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    overflow: auto;
+    display: block;
+}
+
+.modal {
+    margin: auto;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    padding: 20px;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    border: 5px double black;
+    border-radius: 3px;
+}
+
+.modal-close {
+    float: right;
+    border: 0;
+    background-color: var(--background-color);
+    color: #777;
+    text-decoration: underline;
+}
+
 /*Universal Styling*/
 :root {
     --background-color: #FCFAFD;
@@ -63,7 +110,6 @@ header {
 main {
     width: 90%;
     margin: 20px auto;
-    /* border: 3px double black; */
 }
 
 .button {
