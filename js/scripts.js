@@ -52,9 +52,10 @@ let pokemonRepository = (function(){
         return fetch(url).then(function (response) {
             return response.json();
         }).then(function (details) {
+            item.id = details.id;
             item.imageUrl = details.sprites.front_default;
-            item.height = details.height;
-            item.types = details.types;
+            item.height = details.height / 10;
+            item.types = details.types.map((types) => types.type.name);
         }).catch(function (e) {
             console.error(e);
         });
@@ -84,6 +85,9 @@ let pokemonRepository = (function(){
         closeButtonElement.innerText = 'close';
         closeButtonElement.addEventListener('click', hideModal);
 
+        let idElement = document.createElement('p');
+        idElement.innerText = `# ${pokemon.id}`;
+
         let imageElement = document.createElement('img');
         imageElement.src = pokemon.imageUrl;
 
@@ -91,12 +95,13 @@ let pokemonRepository = (function(){
         nameElement.innerText = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
 
         let heightElement = document.createElement('p');
-        heightElement.innerText = `${pokemon.height} decimeters`;
+        heightElement.innerText = `${pokemon.height} meters`;
 
         let typesElement = document.createElement('p');
         typesElement.innerText = pokemon.types;
 
         modal.appendChild(closeButtonElement);
+        modal.appendChild(idElement);
         modal.appendChild(imageElement);
         modal.appendChild(nameElement);
         modal.appendChild(heightElement);
