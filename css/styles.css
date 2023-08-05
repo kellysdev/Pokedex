@@ -48,17 +48,6 @@ ul {
     list-style: none;
 }
 
-/*Header Styling*/
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.header__item {
-    flex-basis: 25%;
-}
-
 /*Main Section Styling*/
 main {
     width: 90%;
@@ -77,11 +66,6 @@ main {
 
 .button:hover {
     background-color: rgba(134, 137, 117, .1);
-}
-
-.special {
-    font-size: medium;
-    color: var(--heading-color);
 }
 
 li {
