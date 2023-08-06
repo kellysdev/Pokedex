@@ -24,10 +24,6 @@ Logo: (eventually) Pixelboy
     --da-accent-color: #555355;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 body {
     background-color: var(--background-color);
 }
@@ -44,13 +40,9 @@ p {
     text-align: center;
 }
 
-ul {
-    list-style: none;
-}
-
 /*Main Section Styling*/
 main {
-    width: 90%;
+    width: 80%;
     margin: auto;
     padding: 40px;
 }
@@ -73,32 +65,7 @@ li {
 }
 
 /*Modal Styling*/
-#modal-container{
-    position: fixed;
-    padding: 20px;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    display: none;
-}
-
-#modal-container.is-visible {
-    position: fixed;
-    padding: 20px;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    overflow: auto;
-    display: block;
-}
-
-.modal {
+.modal-body {
     margin: 30px auto;
     display: block;
     box-sizing: border-box;
