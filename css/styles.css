@@ -60,8 +60,6 @@ main {
     border-radius: 3px;
     background-color: rgba(134, 137, 117, .3);
     margin: 6px;
-
-    /*grid styling*/
 }
 
 .button:hover {

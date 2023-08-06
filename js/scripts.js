@@ -1,7 +1,7 @@
 let pokemonRepository = (function(){
     let pokemonList = [];
     let apiURL = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
-    let modalContainer = document.querySelector('#Modal');
+    let modalContainer = document.querySelector('#modal');
 
     function getAll() {
         return pokemonList;
@@ -78,7 +78,7 @@ let pokemonRepository = (function(){
     function showModal(pokemon) {
         let modalBody = $('.modal-body');
         let modalTitle = $('.modal-title');
-        let modalHeader = $('.modal-header');
+        // let modalHeader = $('.modal-header');
 
         //clear existing content in the modal:
         modalTitle.empty();
@@ -87,16 +87,9 @@ let pokemonRepository = (function(){
         let imageElement = $('<img class="modal-img" style="width:50%">')
         imageElement.attr('src', pokemon.imageUrl);       
         let nameElement = $('<h1>' + pokemon.name[0].toUpperCase() + pokemon.name.slice(1) + '</h1>');
-        let idElement = $('<p>No. ' + pokemon.id + '</p>');
-        let heightElement = $('<p>Height: ' + pokemon.height + 'meters</p>' );
-        let typesElement = $('<p>Types: ' + pokemon.types + '</p>');
-
-        // let closeButtonElement = document.createElement('button');
-        // closeButtonElement.classList.add('modal-close');
-        // closeButtonElement.innerText = 'close';
-        // closeButtonElement.addEventListener('click', hideModal);
-
-        // modal.appendChild(closeButtonElement);
+        let idElement = $('<p>' + 'No.' + pokemon.id + '</p>');
+        let heightElement = $('<p>' + 'Height: ' + pokemon.height + ' meters' + '</p>');
+        let typesElement = $('<p>' + 'Types: ' + pokemon.types + '</p>');
 
         modalTitle.append(nameElement);
         modalBody.append(imageElement);
@@ -105,10 +98,7 @@ let pokemonRepository = (function(){
         modalBody.append(typesElement);
 
         //make modal visible when this function is called
-        $('#Modal').on('show.bs.modal', function (event) {
-            var button = $() //button that triggered the modal
-
-        })
+        
 
         //closes the modal if user clicks outside of modal
         modalContainer.addEventListener('click', (e) => {
