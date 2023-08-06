@@ -66,14 +66,10 @@ li {
 
 /*Modal Styling*/
 .modal-body {
-    margin: 30px auto;
-    display: block;
-    box-sizing: border-box;
-    background-color: var(--background-color);
-    padding: 20px;
-    width: 80%;
-    max-width: 700px;
     text-align: center;
+}
+
+modal {
     border-style: solid;
     border-width: 39px;
     border-image: url("/img/border.png") 39 stretch;
