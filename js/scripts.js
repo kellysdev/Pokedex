@@ -15,21 +15,18 @@ let pokemonRepository = (function(){
         }
     }
 
-    //creates buttons for each pokemon that displays their name
-    function addListItem(pokemon) {
-        let pokemonListVar = document.querySelector('.pokemon-list');
-        let listItem = document.createElement('li');
-        listItem.classList.add('list-group-item');
-        let button = document.createElement('button');
-        button.innerText = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
-        button.classList.add('button');
-        button.classList.add('btn');
-        button.classList.add('data-toggle');
-        button.classList.add('data-target');
-        listItem.appendChild(button);
-        pokemonListVar.appendChild(listItem);
-        button.addEventListener('click', function() {
-            showDetails(pokemon);
+    //loads the details we want from the api
+    function loadDetails(item) {
+        let url = item.detailsUrl;
+        return fetch(url).then(function (response) {
+            return response.json();
+        }).then(function (details) {
+            item.id = details.id;
+            item.imageUrl = details.sprites.front_default;
+            item.height = details.height / 10;
+            item.types = details.types.map((types) => types.type.name);
+        }).catch(function (e) {
+            console.error(e);
         });
     }
 
@@ -50,19 +47,26 @@ let pokemonRepository = (function(){
         })
     }
 
-    //loads the details we want from the api
-    function loadDetails(item) {
-        let url = item.detailsUrl;
-        return fetch(url).then(function (response) {
-            return response.json();
-        }).then(function (details) {
-            item.id = details.id;
-            item.imageUrl = details.sprites.front_default;
-            item.height = details.height / 10;
-            item.types = details.types.map((types) => types.type.name);
-        }).catch(function (e) {
-            console.error(e);
-        });
+    //creates buttons for each pokemon that displays their name
+    function addListItem(pokemon) {
+        let pokemonListVar = document.querySelector('.pokemon-list');
+        let listItem = document.createElement('li');
+        listItem.classList.add('list-group-item');
+        let button = document.createElement('button');
+        button.innerText = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
+        button.classList.add('button');
+        button.classList.add('btn');
+        button.classList.add('data-toggle');
+        button.classList.add('data-target');
+        // button.attr('data-toggle', 'modal');
+        // button.attr('data-target', '#modal');
+        
+        listItem.appendChild(button);
+        pokemonListVar.appendChild(listItem);
+        
+        // button.addEventListener('click', function() {
+        //     showDetails(pokemon);
+        // });
     }
 
     //closes the modal if the escape key is pressed while modal is visible
@@ -73,7 +77,7 @@ let pokemonRepository = (function(){
     });
 
     //create modal:
-    function showModal(pokemon) {
+    function populateModal(pokemon) {
         let modalBody = $('.modal-body');
         let modalTitle = $('.modal-title');
 
@@ -93,7 +97,6 @@ let pokemonRepository = (function(){
         modalBody.append(idElement);
         modalBody.append(heightElement);
         modalBody.append(typesElement);
-
     }
 
     //show modal:
@@ -111,7 +114,7 @@ let pokemonRepository = (function(){
         loadList: loadList,
         loadDetails: loadDetails,
         showDetails: showDetails,
-        showModal: showModal
+        populateModal: populateModal
     };
     
 })();
