@@ -1,7 +1,7 @@
 let pokemonRepository = (function(){
     let pokemonList = [];
     let apiURL = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
-    let modalContainer = document.querySelector('#modal');
+    let modalContainer = document.querySelector('#exampleModal');
 
     function getAll() {
         return pokemonList;
@@ -59,8 +59,8 @@ let pokemonRepository = (function(){
         button.classList.add('btn');
         button.classList.add('data-toggle');
         button.classList.add('data-target');
-        button.attr('data-toggle', 'modal');
-        button.attr('data-target', '#modal');
+        button.setAttribute('data-toggle', 'modal');
+        button.setAttribute('data-target', '#exampleModal');
         
         listItem.appendChild(button);
         pokemonListVar.appendChild(listItem);
