@@ -59,8 +59,8 @@ let pokemonRepository = (function(){
         button.classList.add('btn');
         button.classList.add('data-toggle');
         button.classList.add('data-target');
-        // button.attr('data-toggle', 'modal');
-        // button.attr('data-target', '#modal');
+        button.attr('data-toggle', 'modal');
+        button.attr('data-target', '#modal');
         
         listItem.appendChild(button);
         pokemonListVar.appendChild(listItem);
@@ -101,11 +101,11 @@ let pokemonRepository = (function(){
     }
 
     //show modal:
-    function showDetails(pokemon) {
-        loadDetails(pokemon).then(function() {
-            showModal(pokemon);
-    })
-    };
+    // function showDetails(pokemon) {
+    //     loadDetails(pokemon).then(function() {
+    //         showModal(pokemon);
+    // })
+    // };
 
 
     return {
@@ -114,7 +114,7 @@ let pokemonRepository = (function(){
         addListItem: addListItem,
         loadList: loadList,
         loadDetails: loadDetails,
-        showDetails: showDetails,
+        // showDetails: showDetails,
         populateModal: populateModal
     };
     
