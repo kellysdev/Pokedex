@@ -26,6 +26,9 @@ Logo: (eventually) Pixelboy
 
 body {
     background-color: var(--background-color);
+    /* background-image: url(/img/background.png);
+    background-size: cover;
+    background-repeat: no-repeat; */
 }
 
 h1 {
@@ -42,7 +45,7 @@ p {
 
 /*Main Section Styling*/
 main {
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding: 40px;
 }
@@ -50,7 +53,7 @@ main {
 .button {
     border: 1px solid rgb(58, 58, 58);
     border-radius: 3px;
-    background-color: rgba(134, 137, 117, .3);
+    background-color: rgba(134, 137, 117, 0.4);
     margin: 6px;
 }
 
