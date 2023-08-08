@@ -1,15 +1,15 @@
 let pokemonRepository = (function(){
-    let pokemonList = [];
+    let repository = [];
     let apiURL = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
     let modalContainer = document.querySelector('#exampleModal');
 
     function getAll() {
-        return pokemonList;
+        return repository;
     }
 
     function add(item) {
         if (typeof item === 'object', Object.keys(item).includes('name', 'height', 'types'))  {
-            pokemonList.push(item)
+            repository.push(item)
         }else {
             alert('Verify the Pokemon information.')
         }
@@ -50,7 +50,7 @@ let pokemonRepository = (function(){
     //creates buttons for each pokemon that displays their name
     function addListItem(pokemon) {
     
-        let pokemonListVar = document.querySelector('.pokemon-list');
+        let pokemonList = document.querySelector('.pokemon-list');
         let listItem = document.createElement('li');
         listItem.classList.add('list-group-item.flex-fill');
         
@@ -64,7 +64,7 @@ let pokemonRepository = (function(){
         button.setAttribute('data-bs-target', '#exampleModal');
         
         listItem.appendChild(button);
-        pokemonListVar.appendChild(listItem);
+        pokemonList.appendChild(listItem);
     }
     
     //create modal:
@@ -91,8 +91,10 @@ let pokemonRepository = (function(){
     }
 
     modalContainer.addEventListener('show.bs.modal', () => {
-            populateModal();
-        });
+        loadDetails(pokemon).then(function () {
+            populateModal(pokemon);
+        })
+    });
 
     return {
         getAll: getAll,
