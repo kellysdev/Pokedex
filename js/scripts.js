@@ -65,6 +65,13 @@ let pokemonRepository = (function(){
         
         listItem.appendChild(button);
         pokemonList.appendChild(listItem);
+
+        button.addEventListener('click', function() {
+            loadDetails(pokemon).then(function () {
+            populateModal(pokemon);
+            })
+        })
+
     }
     
     //create modal:
@@ -89,12 +96,6 @@ let pokemonRepository = (function(){
         modalBody.append(heightElement);
         modalBody.append(typesElement);
     }
-
-    modalContainer.addEventListener('show.bs.modal', () => {
-        loadDetails(pokemon).then(function () {
-            populateModal(pokemon);
-        })
-    });
 
     return {
         getAll: getAll,
