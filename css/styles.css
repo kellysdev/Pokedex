@@ -2,10 +2,8 @@
 Initial Color Palette:
     black and white gameboy with color pokemon sprites
 background color: (off white) #FCFAFD, rgb(252, 250, 253)
-    primary color: (dark grey) #3A393B, rgb(58, 57, 59)
-    secondary color: (light grey) #888587, rgb(136, 133, 135)
-        light accent color: (lightest grey) #EAE8EA, rgb(234, 232, 234)
-        dark accent color: (darkest grey) #555355, rgb(85, 83, 85)
+    primary color: (grey) #3A393B
+    green gameboy screen color: rgba(134, 137, 117, 0.8)
 
 
 Fonts:
@@ -17,33 +15,37 @@ Logo: (eventually) Pixelboy
 /*Universal Styling*/
 :root {
     --background-color: #FCFAFD;
-    --heading-color: #3A393b;
-    --primary-color: #3A393b;
-    --secondary-color: #888587;
-    --li-accent-color: #EAE8EA;
-    --da-accent-color: #555355;
+    --primary-color: #3A393B;
+    --green: rgba(134, 137, 117, 0.9);
 }
 
 body {
     font-family: 'VT323', monospace;
-    background-color: var(--background-color);
+    background-image: url(/img/background.svg);
+    background-attachment: fixed;
+    background-size: contain;
 }
 
 h1 {
-    color: var(--heading-color);
+    color: var(--primary-color);
 }
 
 p {
     text-align: center;
 }
 
-/*Main Section Styling*/
-/* main {
-    width: 80%;
-    margin: auto;
-    padding: 40px;
-} */
+/*Navbar Styling*/
+.snorlax {
+    height: 50px;
+    width: 50px;
+    text-align: end;
+}
 
+#form1 {
+    border: 1px solid;
+}
+
+/*Main Section Styling*/
 ul {
     list-style-type: none;
     /* display: flex; */
@@ -56,14 +58,14 @@ ul {
 } */
 
 .button {
-    border: 1px solid rgb(58, 58, 58);
+    border: 1px solid;
     border-radius: 3px;
-    background-color: rgba(134, 137, 117, 0.5);
+    background-color: var(--green);
     margin: 6px;
 }
 
 .button:hover {
-    background-color: rgba(134, 137, 117, .2);
+    background-color: rgba(134, 137, 117, 0.2);
 }
 
 /*Modal Styling*/
