@@ -74,6 +74,19 @@ let pokemonRepository = (function(){
         })
 
     }
+
+    //search:
+    let searchBar = document.querySelector('#form1');
+    searchBar.addEventListener("input", (event) => {
+        let searchString = event.target.value;
+        let filteredList = repository.filter((item) => {
+            return item.name.includes(searchString);
+        });
+        document.querySelector(".pokemon-list").innerHTML = "";
+        filteredList.forEach((item) => {
+            addListItem(item);
+        });
+    });
     
     //create modal:
     function populateModal(pokemon) {
