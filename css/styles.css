@@ -25,46 +25,44 @@ Logo: (eventually) Pixelboy
 }
 
 body {
+    font-family: 'VT323', monospace;
     background-color: var(--background-color);
-    /* background-image: url(/img/background.png);
-    background-size: cover;
-    background-repeat: no-repeat; */
 }
 
 h1 {
-    font-family: 'VT323', monospace;
-    font-size: x-large;
     color: var(--heading-color);
 }
 
 p {
-    font-family: 'VT323', monospace;
-    font-size: large;
     text-align: center;
 }
 
 /*Main Section Styling*/
-main {
-    width: 90%;
+/* main {
+    width: 80%;
     margin: auto;
     padding: 40px;
+} */
+
+ul {
+    list-style-type: none;
 }
+
+/* li {
+    /* container grid styling */
+    /* display: -ms-inline-grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+} */
 
 .button {
     border: 1px solid rgb(58, 58, 58);
     border-radius: 3px;
-    background-color: rgba(134, 137, 117, 0.4);
+    background-color: rgba(134, 137, 117, 0.5);
     margin: 6px;
 }
 
 .button:hover {
-    background-color: rgba(134, 137, 117, .1);
-}
-
-li {
-    /*container grid styling*/
-    display: inline-grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    background-color: rgba(134, 137, 117, .2);
 }
 
 /*Modal Styling*/
@@ -76,8 +74,5 @@ li {
 @media all and (min-width: 600px) {
     p {
         font-size: x-large;
-    }
-    .special {
-        font-size: large;
     }
 }

@@ -58,6 +58,7 @@ let pokemonRepository = (function(){
         button.innerText = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
         button.classList.add('button');
         button.classList.add('btn');
+        button.classList.add('col-2');
         button.classList.add('data-toggle');
         button.classList.add('data-target');
         button.setAttribute('data-bs-toggle', 'modal');
