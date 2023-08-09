@@ -69,10 +69,3 @@ ul {
 .modal-body {
     text-align: center;
 }
-
-/*Media Queries*/
-@media all and (min-width: 600px) {
-    p {
-        font-size: x-large;
-    }
-}
