@@ -42,6 +42,7 @@ let pokemonRepository = (function(){
             item.imageUrl = details.sprites.front_default;
             item.height = details.height / 10;
             item.types = details.types.map((types) => types.type.name);
+            item.abilities = details.abilities.map((abilities) => abilities.ability.name);
         }).catch(function (e) {
             console.error(e);
         });
@@ -103,12 +104,14 @@ let pokemonRepository = (function(){
         let idElement = $('<p>' + 'No.' + pokemon.id + '</p>');
         let heightElement = $('<p>' + 'Height: ' + pokemon.height + ' meters' + '</p>');
         let typesElement = $('<p>' + 'Types: ' + pokemon.types + '</p>');
+        let abilitiesElement = $('<p>' + 'Abilities: ' + pokemon.abilities  + '</p>');
 
         modalTitle.append(nameElement);
         modalBody.append(imageElement);
         modalBody.append(idElement);
         modalBody.append(heightElement);
         modalBody.append(typesElement);
+        modalBody.append(abilitiesElement);
     }
 
     return {
@@ -119,7 +122,7 @@ let pokemonRepository = (function(){
         loadDetails: loadDetails,
         populateModal: populateModal
     };
-    
+
 })();
 
 pokemonRepository.loadList().then(function(){
