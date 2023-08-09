@@ -72,20 +72,6 @@ li {
     text-align: center;
 }
 
-modal {
-    border-style: solid;
-    border-width: 39px;
-    border-image: url("/img/border.png") 39 stretch;
-}
-
-.modal-close {
-    float: right;
-    border: 0;
-    background-color: var(--background-color);
-    color: #777;
-    text-decoration: underline;
-}
-
 /*Media Queries*/
 @media all and (min-width: 600px) {
     p {
