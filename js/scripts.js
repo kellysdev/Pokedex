@@ -53,12 +53,12 @@ let pokemonRepository = (function(){
         let pokemonList = document.querySelector('.pokemon-list');
         let listItem = document.createElement('li');
         listItem.classList.add('list-group-item.flex-fill');
+        listItem.classList.add('col');
         
         let button = document.createElement('button');
         button.innerText = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
         button.classList.add('button');
         button.classList.add('btn');
-        button.classList.add('col-2');
         button.classList.add('data-toggle');
         button.classList.add('data-target');
         button.setAttribute('data-bs-toggle', 'modal');
@@ -69,7 +69,7 @@ let pokemonRepository = (function(){
 
         button.addEventListener('click', function() {
             loadDetails(pokemon).then(function () {
-            populateModal(pokemon);
+                populateModal(pokemon);
             })
         })
 
