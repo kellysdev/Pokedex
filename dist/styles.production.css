@@ -1,4 +1,11 @@
 /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 2 version
+*/
+
+/*
 Initial Color Palette:
     black and white gameboy with color pokemon sprites
 background color: (off white) #FCFAFD, rgb(252, 250, 253)
@@ -21,7 +28,7 @@ Logo: (eventually) Pixelboy
 
 body {
     font-family: 'VT323', monospace;
-    background-image: url(/img/background.svg);
+    background-image: url(/src/img/background.svg);
     background-attachment: fixed;
     background-size: contain;
 }
@@ -49,14 +56,7 @@ p {
 /*Main Section Styling*/
 ul {
     list-style-type: none;
-    /* display: flex; */
 }
-
-/* li { */
-    /* container grid styling */
-    /* display: -ms-inline-grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-} */
 
 .button {
     border: 1px solid;
