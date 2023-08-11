@@ -28,7 +28,7 @@ Logo: (eventually) Pixelboy
 
 body {
     font-family: 'VT323', monospace;
-    background-image: url(/src/img/background.svg);
+    background-image: url(./src/img/background.svg);
     background-attachment: fixed;
     background-size: contain;
 }
