@@ -28,7 +28,7 @@ The app was first written in HTML, CSS and JavaScript to fetch the data using fr
 
 ## Link
 
-[Live App Available Here!](lladysmall.github.io/Pokedex/)
+[Live App Available Here!](https://lladysmall.github.io/Pokedex/)
 
 ## Future Updates
 
