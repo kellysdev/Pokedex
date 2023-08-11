@@ -1,4 +1,4 @@
-![pokedex logo](/img/darkmodelogo.svg)
+![pokedex logo](./src/img/darkmodelogo.svg)
 
 # A JavaScript App
 
