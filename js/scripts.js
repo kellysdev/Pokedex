@@ -53,10 +53,11 @@ let pokemonRepository = (function(){
     
         let pokemonList = document.querySelector('.pokemon-list');
         let listItem = document.createElement('li');
-        listItem.classList.add('list-group-item.flex-fill');
-        listItem.classList.add('col');
+        listItem.classList.add('list-group-item');
         
         let button = document.createElement('button');
+        // I can't get the sprites to appear in the buttons:
+        // button.innerHTML = pokemon.imageUrl +  '<br>' + pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
         button.innerText = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
         button.classList.add('button');
         button.classList.add('btn');
@@ -73,7 +74,6 @@ let pokemonRepository = (function(){
                 populateModal(pokemon);
             })
         })
-
     }
 
     //search:
@@ -114,13 +114,18 @@ let pokemonRepository = (function(){
         modalBody.append(abilitiesElement);
     }
 
+    function preloadImages(pokemon) {
+        new Image().src = pokemon.imageUrl;
+    }
+
     return {
         getAll: getAll,
         add: add,
         addListItem: addListItem,
         loadList: loadList,
         loadDetails: loadDetails,
-        populateModal: populateModal
+        populateModal: populateModal,
+        preloadImages: preloadImages
     };
 
 })();
@@ -130,8 +135,3 @@ pokemonRepository.loadList().then(function(){
         pokemonRepository.addListItem(pokemon);
     });
 });
-
-function myLoopFunction(pokemon) {
-    pokemonRepository.addListItem(pokemon)
-}
-pokemonRepository.getAll().forEach(myLoopFunction);

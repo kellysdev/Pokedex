@@ -16,7 +16,7 @@ Logo: (eventually) Pixelboy
 :root {
     --background-color: #FCFAFD;
     --primary-color: #3A393B;
-    --green: rgba(134, 137, 117, 0.9);
+    --green: rgba(157, 160, 141, 0.9);
 }
 
 body {
@@ -32,6 +32,7 @@ h1 {
 
 p {
     text-align: center;
+    color: black;
 }
 
 /*Navbar Styling*/
@@ -62,10 +63,11 @@ ul {
     border-radius: 3px;
     background-color: var(--green);
     margin: 6px;
+    width: 120px !important;
 }
 
 .button:hover {
-    background-color: rgba(134, 137, 117, 0.2);
+    background-color: rgba(134, 137, 117, 0.5);
 }
 
 /*Modal Styling*/
