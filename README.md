@@ -20,14 +20,19 @@ The app was first written in HTML, CSS and JavaScript to fetch the data using fr
 - JQuery
 - Bootstrap
 
-<!-- add screenshots here -->
+## Screenshots
+
+![full screen screenshot](./src/img/fullscreen.png)   ![full screen screenshot with snorlax modal](./src/img/fullscreen-modal.png)
+
+![mobile screenshot](./src/img/mobile.png)   ![mobile screenshot with gengar modal](./src/img/mobile-modal.png)
 
 ## Link
 
-<!-- add link to like app here -->
-[GitHub Repository](https://github.com/lladysmall/Pokedex)
+[Live App Available Here!](lladysmall.github.io/Pokedex/)
 
 ## Future Updates
+
+- [ ] Add Pokemon sprites to buttons
 - [ ] Add more search functions
 - [ ] Pull flavor text from the API
 - [ ] Format modal body
