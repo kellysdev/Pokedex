@@ -1,7 +1,6 @@
 let pokemonRepository = (function(){
     let repository = [];
     let apiURL = "https://pokeapi.co/api/v2/pokemon/?limit=151";
-    let modalContainer = document.querySelector("#exampleModal");
 
     function getAll() {
         return repository;
