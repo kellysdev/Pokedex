@@ -28,7 +28,7 @@ The app was first written in HTML, CSS and JavaScript to fetch the data using fr
 
 ## Link
 
-[Live App Available Here!](https://lladysmall.github.io/Pokedex/)
+[Live App Available Here!](https://kellysdev.github.io/Pokedex/)
 
 ## Future Updates
 
@@ -41,5 +41,3 @@ The app was first written in HTML, CSS and JavaScript to fetch the data using fr
 
 Thank you to those behind the PokeAPI for compiling so much data and making it available to the public.
 Thanks also go to my patient tutor, Jason, and my mentor, Vini, at Career Foundry.
-
-You can find more about me and my work on [my personal website](https://lladysmall.github.io/portfolio-website/)!
