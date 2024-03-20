@@ -15,7 +15,7 @@ The app was first written in HTML, CSS and JavaScript to fetch the data using fr
 - The user can search for a Pokemon by name using a search bar at the top of the page
 - When the button for the chosen Pokemon is clicked, a modal displays their image and information
 
-## Dependendcies
+## Dependencies
 
 - JQuery
 - Bootstrap
