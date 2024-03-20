@@ -1,7 +1,5 @@
 ![pokedex logo](./src/img/darkmodelogo.svg)
 
-# A JavaScript App
-
 This is a small web application built with HTML, CSS, JavaScript, some JQuery, and Bootstrap.  The app loads data from an external API, the [PokeAPI](https://pokeapi.co/docs/v2") and enables the viewing of data points in detail.
 
 This project was built as part of the Career Foundry Full-Stack Immersion course in the Full-Stack Web Development Program and was inspired by the Red and Blue Pokemon games played on a black and white Gameboy.
